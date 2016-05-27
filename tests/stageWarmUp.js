@@ -25,7 +25,7 @@ module.exports = {
           .execute('document.getElementById("Password").value="password1"')
           .pause(100)
           .execute('document.getElementById("loginButton").click()')
-          .pause(20000)
+          .pause(30000)
           .waitForElementVisible("body", env.timeout)
           .assert.urlEquals("https://" + env.securePrefix + env.url + "/it/myoox")
           .url("https//" + env.url + "/it/myoox/login/logout")
