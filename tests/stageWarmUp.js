@@ -1,16 +1,19 @@
 
-var constants = require('../common/constants');
+var constants = require('../common/constants'),
+    fs = require('fs');
 
 module.exports = {
     
  
    "Environment warmup" : function (browser) {
 
+
       var env = constants.LCL;
       var param = process.argv[2];
       if (param) {
         env = constants[param];
       }
+
 
       browser
           .windowMaximize()
